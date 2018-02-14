@@ -185,6 +185,13 @@ public protocol MessagesLayoutDelegate: AnyObject {
     /// The default value returned by this method is `false`.
     func shouldCacheLayoutAttributes(for message: MessageType) -> Bool
 
+    /// Returns the size of the `MessageContainerView` in a `MessageCollectionViewCell`
+    /// for the `MessageType` with custom data at a given `IndexPath`.
+    ///
+    /// - Parameters:
+    ///   - message: The `MessageType` for the given `IndexPath`.
+    ///   - indexPath: The `IndexPath` for the given `MessageType`.
+    func messageContainerSize(for message: MessageType, at indexPath: IndexPath) -> CGSize
 }
 
 public extension MessagesLayoutDelegate {
