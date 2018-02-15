@@ -37,14 +37,14 @@ open class SeparatorLine: UIView {
     // MARK: - Properties
     
     /// The height of the line
-    open var height: CGFloat = 1.0 {
+    open var lineHeight: CGFloat = 1.0 {
         didSet {
             invalidateIntrinsicContentSize()
         }
     }
     
     open override var intrinsicContentSize: CGSize {
-        return CGSize(width: super.intrinsicContentSize.width, height: height)
+        return CGSize(width: super.intrinsicContentSize.width, height: lineHeight)
     }
     
     // MARK: - Initialization
